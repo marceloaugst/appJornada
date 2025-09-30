@@ -23,11 +23,24 @@ Este sistema de dados mock permite testar todas as funcionalidades da aplicaçã
 5. **Cargo Sul Distribuidora** (CSD005)
 
 ### Veículos por Empresa
-- **Transportes São Paulo**: ABC-1234 (Volvo FH 540), DEF-5678 (Scania R 450)
-- **Logística Rio de Janeiro**: GHI-9012 (Mercedes-Benz Actros), JKL-3456 (MAN TGX 28.480)
-- **Frota Minas Gerais**: MNO-7890 (Iveco Stralis), PQR-1357 (DAF XF 105)
-- **Transportadora Nacional**: STU-2468 (Ford Cargo 2429)
-- **Cargo Sul**: VWX-9753 (Volkswagen Constellation)
+- **Transportes São Paulo**: 
+  - ABC-1234 (Volvo FH 540)
+  - DEF-5678 (Scania R 450)
+  - GHI-9876 (Mercedes-Benz Actros 2651)
+- **Logística Rio de Janeiro**: 
+  - JKL-3456 (Mercedes-Benz Actros)
+  - MNO-7890 (MAN TGX 28.480)
+  - PQR-1357 (Volvo FH 460)
+- **Frota Minas Gerais**: 
+  - STU-2468 (Iveco Stralis)
+  - VWX-9753 (DAF XF 105)
+  - YZA-8642 (Scania R 500)
+- **Transportadora Nacional**: 
+  - BCD-1357 (Ford Cargo 2429)
+  - EFG-2468 (Volkswagen Constellation 24.280)
+- **Cargo Sul**: 
+  - HIJ-9876 (Volkswagen Constellation)
+  - KLM-5432 (Mercedes-Benz Atego 2426)
 
 ## 🚀 Como Testar
 
@@ -40,9 +53,18 @@ Este sistema de dados mock permite testar todas as funcionalidades da aplicaçã
 ### 2. Tela de Empresa
 - Os dados do usuário e empresa serão exibidos automaticamente
 - ✅ Veículos da empresa serão carregados
+- 🚛 **NOVO**: Selecione um veículo da lista disponível
+- ✅ Obrigatório selecionar veículo para continuar
 
-### 3. Tela Principal (Home)
-- Selecione um veículo da lista
+### 3. Seleção de Veículo
+- **Toque no campo "Selecionar veículo"** para abrir a lista
+- ✅ Escolha entre 2-3 veículos disponíveis por empresa
+- ✅ Visualize placa e modelo de cada veículo
+- ✅ Confirmação necessária para vincular usuário ao veículo
+- ⚠️ **Obrigatório** selecionar veículo antes de continuar
+
+### 4. Tela Principal (Home)
+- Veículo selecionado será exibido no topo
 - ✅ Teste todos os botões de status:
   - **Iniciar Jornada** - Inicia cronômetro
   - **Em Direção** - Altera status para dirigindo
@@ -101,6 +123,9 @@ Edite `lib/services/mock_data.dart` para:
 
 ✅ **Login completo** com validação  
 ✅ **Seleção de empresa e veículo**  
+🚛 **Vinculação de usuário a veículo** (NOVO)
+✅ **Múltiplos veículos por empresa** (2-3 opções)  
+✅ **Interface nativa de seleção** com CupertinoPicker  
 ✅ **Cronômetro de jornada** em tempo real  
 ✅ **Todos os status de trabalho**  
 ✅ **Persistência entre sessões**  

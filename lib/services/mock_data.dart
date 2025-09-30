@@ -44,22 +44,91 @@ class MockData {
 
   // Lista de veículos mock
   static final List<Vehicle> vehicles = [
-    Vehicle(id: 1, plate: 'ABC-1234', model: 'Volvo FH 540', companyId: 1),
-    Vehicle(id: 2, plate: 'DEF-5678', model: 'Scania R 450', companyId: 1),
+    // Transportes São Paulo LTDA (empresa 1)
+    Vehicle(
+      id: 1,
+      plate: 'ABC-1234',
+      model: 'Volvo FH 540',
+      companyId: 1,
+    ),
+    Vehicle(
+      id: 2,
+      plate: 'DEF-5678',
+      model: 'Scania R 450',
+      companyId: 1,
+    ),
     Vehicle(
       id: 3,
-      plate: 'GHI-9012',
+      plate: 'GHI-9876',
+      model: 'Mercedes-Benz Actros 2651',
+      companyId: 1,
+    ),
+    
+    // Logística Rio de Janeiro S.A. (empresa 2)
+    Vehicle(
+      id: 4,
+      plate: 'JKL-3456',
       model: 'Mercedes-Benz Actros',
       companyId: 2,
     ),
-    Vehicle(id: 4, plate: 'JKL-3456', model: 'MAN TGX 28.480', companyId: 2),
-    Vehicle(id: 5, plate: 'MNO-7890', model: 'Iveco Stralis', companyId: 3),
-    Vehicle(id: 6, plate: 'PQR-1357', model: 'DAF XF 105', companyId: 3),
-    Vehicle(id: 7, plate: 'STU-2468', model: 'Ford Cargo 2429', companyId: 4),
+    Vehicle(
+      id: 5,
+      plate: 'MNO-7890',
+      model: 'MAN TGX 28.480',
+      companyId: 2,
+    ),
+    Vehicle(
+      id: 6,
+      plate: 'PQR-1357',
+      model: 'Volvo FH 460',
+      companyId: 2,
+    ),
+    
+    // Frota Minas Gerais EIRELI (empresa 3)
+    Vehicle(
+      id: 7,
+      plate: 'STU-2468',
+      model: 'Iveco Stralis',
+      companyId: 3,
+    ),
     Vehicle(
       id: 8,
       plate: 'VWX-9753',
+      model: 'DAF XF 105',
+      companyId: 3,
+    ),
+    Vehicle(
+      id: 9,
+      plate: 'YZA-8642',
+      model: 'Scania R 500',
+      companyId: 3,
+    ),
+    
+    // Transportadora Nacional Express (empresa 4)
+    Vehicle(
+      id: 10,
+      plate: 'BCD-1357',
+      model: 'Ford Cargo 2429',
+      companyId: 4,
+    ),
+    Vehicle(
+      id: 11,
+      plate: 'EFG-2468',
+      model: 'Volkswagen Constellation 24.280',
+      companyId: 4,
+    ),
+    
+    // Cargo Sul Distribuidora (empresa 5)
+    Vehicle(
+      id: 12,
+      plate: 'HIJ-9876',
       model: 'Volkswagen Constellation',
+      companyId: 5,
+    ),
+    Vehicle(
+      id: 13,
+      plate: 'KLM-5432',
+      model: 'Mercedes-Benz Atego 2426',
       companyId: 5,
     ),
   ];
