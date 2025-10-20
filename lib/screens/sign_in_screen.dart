@@ -53,8 +53,23 @@ class _SignInScreenState extends State<SignInScreen> {
       return;
     }
 
+    // Verificar se empresa foi selecionada (apenas para API real)
     final authProvider = context.read<AuthProvider>();
-    final success = await authProvider.login(cpf: cpf, password: password);
+    print('SignInScreen: Usando mock: ${MockApiService.isUsingMockData}');
+    print(
+      'SignInScreen: Empresa selecionada: ${_selectedCompany?.name} (ID: ${_selectedCompany?.id})',
+    );
+
+    if (!MockApiService.isUsingMockData && _selectedCompany == null) {
+      _showErrorDialog('Selecione uma empresa.');
+      return;
+    }
+
+    final success = await authProvider.login(
+      cpf: cpf,
+      password: password,
+      company: _selectedCompany, // passa a empresa selecionada
+    );
 
     if (success) {
       if (mounted) {

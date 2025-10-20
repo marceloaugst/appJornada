@@ -3,7 +3,8 @@ import '../models/vehicle.dart';
 import 'mock_data.dart';
 
 class MockApiService {
-  static const bool _useMockData = true; // Altere para false para usar API real
+  static const bool _useMockData =
+      false; // API real ativada conforme solicitado pelo usuário
 
   // Simulação de login
   static Future<Map<String, dynamic>> login(String cpf, String password) async {
